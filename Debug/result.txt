@@ -1,0 +1,2238 @@
+int 
+fa ident
+(
+int 
+a ident
+,
+char 
+b ident
+)
+{
+const 
+int 
+q ident
+= becomes
+1 intcon
+;
+int 
+w ident
+;
+w ident
+= becomes
+a ident
+;
+if 
+(
+a ident
+== eql
+1 intcon
+)
+{
+}
+else 
+{
+;
+{
+}
+;
+}
+while 
+(
+a ident
+<  geq
+10 intcon
+)
+{
+a ident
+= becomes
+a ident
++
+q ident
+;
+;
+;
+}
+a ident
+= becomes
+a ident
++
+b ident
+;
+return 
+(
+fa1 ident
+(
+w ident
+)
+)
+;
+}
+int 
+fc ident
+{
+return 
+(
+3 intcon
+/
+2 intcon
+)
+;
+}
+int 
+fa1 ident
+(
+int 
+a ident
+)
+{
+if 
+(
+a ident
+<= gtr
+0 intcon
+)
+{
+;
+}
+else 
+{
+switch 
+(
+a ident
+)
+{
+case 
+0 intcon
+:
+return 
+(
+0 intcon
+)
+;
+case 
+1 intcon
+:
+return 
+(
+a ident
+)
+;
+default 
+:
+{
+vb ident
+= becomes
+a ident
+*
+fa1 ident
+(
+a ident
+-
+1 intcon
+)
+;
+;
+{
+;
+;
+}
+return 
+(
+vb ident
+)
+;
+}
+}
+}
+return 
+(
+-
+1 intcon
+)
+;
+}
+void 
+fd ident
+(
+int 
+i ident
+)
+{
+if 
+(
+i ident
+> lss
+0 intcon
+)
+{
+fa2 ident
+(
+i ident
+)
+;
+}
+else 
+printf 
+(
+ERROR stringcon
+)
+;
+}
+void 
+fa2 ident
+(
+int 
+i ident
+)
+{
+int 
+t ident
+;
+if 
+(
+i ident
+== eql
+0 intcon
+)
+return 
+;
+else 
+{
+t ident
+= becomes
+i ident
+/
+2 intcon
+;
+fa2 ident
+(
+t ident
+)
+;
+if 
+(
+i ident
+-
+t ident
+*
+2 intcon
+== eql
+0 intcon
+)
+printf 
+(
+0 charcon
+)
+;
+else 
+printf 
+(
+1 charcon
+)
+;
+}
+}
+void 
+main 
+(
+)
+{
+const 
+int 
+a0 ident
+= becomes
+10 intcon
+;
+int 
+vva ident
+,
+vvb ident
+;
+char 
+vvc ident
+;
+va ident
+= becomes
+a0 ident
+;
+scanf 
+(
+va ident
+,
+vva ident
+,
+vca ident
+)
+;
+fc ident
+;
+vac ident
+[
+0 intcon
+]
+= becomes
+-
+(
+a0 ident
++
+-
+7 intcon
+)
+*
+a_ ident
++
+fc ident
+;
+vac ident
+[
+1 intcon
+]
+= becomes
+-
++
+7 intcon
+;
+vac ident
+[
+2 intcon
+]
+= becomes
+fa ident
+(
+a0 ident
+,
+a_ ident
+)
+;
+printf 
+(
+!#:  stringcon
+,
+vac ident
+[
+0 intcon
+]
+)
+;
+printf 
+(
+----- stringcon
+)
+;
+printf 
+(
+vac ident
+[
+2 intcon
+]
+)
+;
+fd ident
+(
+vva ident
+)
+;
+return 
+;
+1 int intsy
+2 fa ident
+3 ( lparen
+4 int intsy
+5 a ident
+6 , comma
+7 char charsy
+8 b ident
+9 ) rparen
+10 { lbrace
+11 const constsy
+12 int intsy
+13 q ident
+14 = becomes
+15 1 intcon
+16 ; semicolon
+17 int intsy
+18 w ident
+19 ; semicolon
+20 w ident
+21 = becomes
+22 a ident
+23 ; semicolon
+24 if ifsy
+25 ( lparen
+26 a ident
+27 == eql
+28 1 intcon
+29 ) rparen
+30 { lbrace
+31 } rbrace
+32 else elsesy
+33 { lbrace
+34 ; semicolon
+35 { lbrace
+36 } rbrace
+37 ; semicolon
+38 } rbrace
+39 while whilesy
+40 ( lparen
+41 a ident
+42 <= leq
+43 10 intcon
+44 ) rparen
+45 { lbrace
+46 a ident
+47 = becomes
+48 a ident
+49 + plus
+50 q ident
+51 ; semicolon
+52 ; semicolon
+53 ; semicolon
+54 } rbrace
+55 a ident
+56 = becomes
+57 a ident
+58 + plus
+59 b ident
+60 ; semicolon
+61 return
+62 ( lparen
+63 fa1 ident
+64 ( lparen
+65 w ident
+66 ) rparen
+67 ) rparen
+68 ; semicolon
+69 } rbrace
+70 int intsy
+71 fc ident
+72 { lbrace
+73 return
+74 ( lparen
+75 3 intcon
+76 / divsy
+77 2 intcon
+78 ) rparen
+79 ; semicolon
+80 } rbrace
+81 int intsy
+82 fa1 ident
+83 ( lparen
+84 int intsy
+85 a ident
+86 ) rparen
+87 { lbrace
+88 if ifsy
+89 ( lparen
+90 a ident
+91 < lss
+92 0 intcon
+93 ) rparen
+94 { lbrace
+95 ; semicolon
+96 } rbrace
+97 else elsesy
+98 { lbrace
+99 switch switchsy
+100 ( lparen
+101 a ident
+102 ) rparen
+103 { lbrace
+104 case casesy
+105 0 intcon
+106 : colon
+107 return
+108 ( lparen
+109 0 intcon
+110 ) rparen
+111 ; semicolon
+112 case casesy
+113 1 intcon
+114 : colon
+115 return
+116 ( lparen
+117 a ident
+118 ) rparen
+119 ; semicolon
+120 default defaultsy
+121 : colon
+122 { lbrace
+123 vb ident
+124 = becomes
+125 a ident
+126 * times
+127 fa1 ident
+128 ( lparen
+129 a ident
+130 - minus
+131 1 intcon
+132 ) rparen
+133 ; semicolon
+134 ; semicolon
+135 { lbrace
+136 ; semicolon
+137 ; semicolon
+138 } rbrace
+139 return
+140 ( lparen
+141 vb ident
+142 ) rparen
+143 ; semicolon
+144 } rbrace
+145 } rbrace
+146 } rbrace
+147 return
+148 ( lparen
+149 - minus
+150 1 intcon
+151 ) rparen
+152 ; semicolon
+153 } rbrace
+154 void voidsy
+155 fd ident
+156 ( lparen
+157 int intsy
+158 i ident
+159 ) rparen
+160 { lbrace
+161 if ifsy
+162 ( lparen
+163 i ident
+164 > gtr
+165 0 intcon
+166 ) rparen
+167 { lbrace
+168 fa2 ident
+169 ( lparen
+170 i ident
+171 ) rparen
+172 ; semicolon
+173 } rbrace
+174 else elsesy
+175 printf returnsy
+176 ( lparen
+177 ERROR stringcon
+178 ) rparen
+179 ; semicolon
+180 } rbrace
+181 void voidsy
+182 fa2 ident
+183 ( lparen
+184 int intsy
+185 i ident
+186 ) rparen
+187 { lbrace
+188 int intsy
+189 t ident
+190 ; semicolon
+191 if ifsy
+192 ( lparen
+193 i ident
+194 == eql
+195 0 intcon
+196 ) rparen
+197 return
+198 ; semicolon
+199 else elsesy
+200 { lbrace
+201 t ident
+202 = becomes
+203 i ident
+204 / divsy
+205 2 intcon
+206 ; semicolon
+207 fa2 ident
+208 ( lparen
+209 t ident
+210 ) rparen
+211 ; semicolon
+212 if ifsy
+213 ( lparen
+214 i ident
+215 - minus
+216 t ident
+217 * times
+218 2 intcon
+219 == eql
+220 0 intcon
+221 ) rparen
+222 printf returnsy
+223 ( lparen
+224 0 charcon
+225 ) rparen
+226 ; semicolon
+227 else elsesy
+228 printf returnsy
+229 ( lparen
+230 1 charcon
+231 ) rparen
+232 ; semicolon
+233 } rbrace
+234 } rbrace
+235 void voidsy
+236 main mainsy
+237 ( lparen
+238 ) rparen
+239 { lbrace
+240 const constsy
+241 int intsy
+242 a0 ident
+243 = becomes
+244 10 intcon
+245 ; semicolon
+246 int intsy
+247 vva ident
+248 , comma
+249 vvb ident
+250 ; semicolon
+251 char charsy
+252 vvc ident
+253 ; semicolon
+254 va ident
+255 = becomes
+256 a0 ident
+257 ; semicolon
+258 scanf scanfsy
+259 ( lparen
+260 va ident
+261 , comma
+262 vva ident
+263 , comma
+264 vca ident
+265 ) rparen
+266 ; semicolon
+267 fc ident
+268 ; semicolon
+269 vac ident
+270 [ lbrack
+271 0 intcon
+272 ] rbrack
+273 = becomes
+274 - minus
+275 ( lparen
+276 a0 ident
+277 + plus
+278 - minus
+279 7 intcon
+280 ) rparen
+281 * times
+282 a_ ident
+283 + plus
+284 fc ident
+285 ; semicolon
+286 vac ident
+287 [ lbrack
+288 1 intcon
+289 ] rbrack
+290 = becomes
+291 - minus
+292 + plus
+293 7 intcon
+294 ; semicolon
+295 vac ident
+296 [ lbrack
+297 2 intcon
+298 ] rbrack
+299 = becomes
+300 fa ident
+301 ( lparen
+302 a0 ident
+303 , comma
+304 a_ ident
+305 ) rparen
+306 ; semicolon
+307 printf returnsy
+308 ( lparen
+309 !#:  stringcon
+310 , comma
+311 vac ident
+312 [ lbrack
+313 0 intcon
+314 ] rbrack
+315 ) rparen
+316 ; semicolon
+317 printf returnsy
+318 ( lparen
+319 ----- stringcon
+320 ) rparen
+321 ; semicolon
+322 printf returnsy
+323 ( lparen
+324 vac ident
+325 [ lbrack
+326 2 intcon
+327 ] rbrack
+328 ) rparen
+329 ; semicolon
+330 fd ident
+331 ( lparen
+332 vva ident
+333 ) rparen
+334 ; semicolon
+335 return
+336 ; semicolon
+337 } rbrace
+1 int intsy
+2 fa ident
+3 ( lparen
+4 int intsy
+5 a ident
+6 , comma
+7 char charsy
+8 b ident
+9 ) rparen
+10 { lbrace
+11 const constsy
+12 int intsy
+13 q ident
+14 = becomes
+15 1 intcon
+16 ; semicolon
+17 int intsy
+18 w ident
+19 ; semicolon
+20 w ident
+21 = becomes
+22 a ident
+23 ; semicolon
+24 if ifsy
+25 ( lparen
+26 a ident
+27 == eql
+28 1 intcon
+29 ) rparen
+30 { lbrace
+31 } rbrace
+32 else elsesy
+33 { lbrace
+34 ; semicolon
+35 { lbrace
+36 } rbrace
+37 ; semicolon
+38 } rbrace
+39 while whilesy
+40 ( lparen
+41 a ident
+42 <= leq
+43 10 intcon
+44 ) rparen
+45 { lbrace
+46 a ident
+47 = becomes
+48 a ident
+49 + plus
+50 q ident
+51 ; semicolon
+52 ; semicolon
+53 ; semicolon
+54 } rbrace
+55 a ident
+56 = becomes
+57 a ident
+58 + plus
+59 b ident
+60 ; semicolon
+61 return
+62 ( lparen
+63 fa1 ident
+64 ( lparen
+65 w ident
+66 ) rparen
+67 ) rparen
+68 ; semicolon
+69 } rbrace
+70 int intsy
+71 fc ident
+72 { lbrace
+73 return
+74 ( lparen
+75 3 intcon
+76 / divsy
+77 2 intcon
+78 ) rparen
+79 ; semicolon
+80 } rbrace
+81 int intsy
+82 fa1 ident
+83 ( lparen
+84 int intsy
+85 a ident
+86 ) rparen
+87 { lbrace
+88 if ifsy
+89 ( lparen
+90 a ident
+91 < lss
+92 0 intcon
+93 ) rparen
+94 { lbrace
+95 ; semicolon
+96 } rbrace
+97 else elsesy
+98 { lbrace
+99 switch switchsy
+100 ( lparen
+101 a ident
+102 ) rparen
+103 { lbrace
+104 case casesy
+105 0 intcon
+106 : colon
+107 return
+108 ( lparen
+109 0 intcon
+110 ) rparen
+111 ; semicolon
+112 case casesy
+113 1 intcon
+114 : colon
+115 return
+116 ( lparen
+117 a ident
+118 ) rparen
+119 ; semicolon
+120 default defaultsy
+121 : colon
+122 { lbrace
+123 vb ident
+124 = becomes
+125 a ident
+126 * times
+127 fa1 ident
+128 ( lparen
+129 a ident
+130 - minus
+131 1 intcon
+132 ) rparen
+133 ; semicolon
+134 ; semicolon
+135 { lbrace
+136 ; semicolon
+137 ; semicolon
+138 } rbrace
+139 return
+140 ( lparen
+141 vb ident
+142 ) rparen
+143 ; semicolon
+144 } rbrace
+145 } rbrace
+146 } rbrace
+147 return
+148 ( lparen
+149 - minus
+150 1 intcon
+151 ) rparen
+152 ; semicolon
+153 } rbrace
+154 void voidsy
+155 fd ident
+156 ( lparen
+157 int intsy
+158 i ident
+159 ) rparen
+160 { lbrace
+161 if ifsy
+162 ( lparen
+163 i ident
+164 > gtr
+165 0 intcon
+166 ) rparen
+167 { lbrace
+168 fa2 ident
+169 ( lparen
+170 i ident
+171 ) rparen
+172 ; semicolon
+173 } rbrace
+174 else elsesy
+175 printf returnsy
+176 ( lparen
+177 ERROR stringcon
+178 ) rparen
+179 ; semicolon
+180 } rbrace
+181 void voidsy
+182 fa2 ident
+183 ( lparen
+184 int intsy
+185 i ident
+186 ) rparen
+187 { lbrace
+188 int intsy
+189 t ident
+190 ; semicolon
+191 if ifsy
+192 ( lparen
+193 i ident
+194 == eql
+195 0 intcon
+196 ) rparen
+197 return
+198 ; semicolon
+199 else elsesy
+200 { lbrace
+201 t ident
+202 = becomes
+203 i ident
+204 / divsy
+205 2 intcon
+206 ; semicolon
+207 fa2 ident
+208 ( lparen
+209 t ident
+210 ) rparen
+211 ; semicolon
+212 if ifsy
+213 ( lparen
+214 i ident
+215 - minus
+216 t ident
+217 * times
+218 2 intcon
+219 == eql
+220 0 intcon
+221 ) rparen
+222 printf returnsy
+223 ( lparen
+224 0 charcon
+225 ) rparen
+226 ; semicolon
+227 else elsesy
+228 printf returnsy
+229 ( lparen
+230 1 charcon
+231 ) rparen
+232 ; semicolon
+233 } rbrace
+234 } rbrace
+235 void voidsy
+236 main mainsy
+237 ( lparen
+238 ) rparen
+239 { lbrace
+240 const constsy
+241 int intsy
+242 a0 ident
+243 = becomes
+244 10 intcon
+245 ; semicolon
+246 int intsy
+247 vva ident
+248 , comma
+249 vvb ident
+250 ; semicolon
+251 char charsy
+252 vvc ident
+253 ; semicolon
+254 va ident
+255 = becomes
+256 a0 ident
+257 ; semicolon
+258 scanf scanfsy
+259 ( lparen
+260 va ident
+261 , comma
+262 vva ident
+263 , comma
+264 vca ident
+265 ) rparen
+266 ; semicolon
+267 fc ident
+268 ; semicolon
+269 vac ident
+270 [ lbrack
+271 0 intcon
+272 ] rbrack
+273 = becomes
+274 - minus
+275 ( lparen
+276 a0 ident
+277 + plus
+278 - minus
+279 7 intcon
+280 ) rparen
+281 * times
+282 a_ ident
+283 + plus
+284 fc ident
+285 ; semicolon
+286 vac ident
+287 [ lbrack
+288 1 intcon
+289 ] rbrack
+290 = becomes
+291 - minus
+292 + plus
+293 7 intcon
+294 ; semicolon
+295 vac ident
+296 [ lbrack
+297 2 intcon
+298 ] rbrack
+299 = becomes
+300 fa ident
+301 ( lparen
+302 a0 ident
+303 , comma
+304 a_ ident
+305 ) rparen
+306 ; semicolon
+307 printf returnsy
+308 ( lparen
+309 !#:  stringcon
+310 , comma
+311 vac ident
+312 [ lbrack
+313 0 intcon
+314 ] rbrack
+315 ) rparen
+316 ; semicolon
+317 printf returnsy
+318 ( lparen
+319 ----- stringcon
+320 ) rparen
+321 ; semicolon
+322 printf returnsy
+323 ( lparen
+324 vac ident
+325 [ lbrack
+326 2 intcon
+327 ] rbrack
+328 ) rparen
+329 ; semicolon
+330 fd ident
+331 ( lparen
+332 vva ident
+333 ) rparen
+334 ; semicolon
+335 return
+336 ; semicolon
+337 } rbrace
+1 const constsy
+2 int intsy
+3 a ident
+4 = becomes
+5 1 intcon
+6 ; semicolon
+7 char charsy
+8 c_d ident
+9 ; semicolon
+10 int intsy
+11 fnumbers ident
+12 [ lbrack
+13 20 intcon
+14 ] rbrack
+15 ; semicolon
+16 int intsy
+17 topn ident
+18 , comma
+19 topop ident
+20 ; semicolon
+21 int intsy
+22 numbers ident
+23 [ lbrack
+24 20 intcon
+25 ] rbrack
+26 ; semicolon
+27 char charsy
+28 ops ident
+29 [ lbrack
+30 20 intcon
+31 ] rbrack
+32 ; semicolon
+33 int intsy
+34 op ident
+35 ( lparen
+36 int intsy
+37 n1 ident
+38 , comma
+39 int intsy
+40 n2 ident
+41 , comma
+42 char charsy
+43 c ident
+44 ) rparen
+45 { lbrace
+46 int intsy
+47 result ident
+48 ; semicolon
+49 switch switchsy
+50 ( lparen
+51 c ident
+52 ) rparen
+53 { lbrace
+54 case casesy
+55 + charcon
+56 : colon
+57 result ident
+58 = becomes
+59 n1 ident
+60 + plus
+61 n2 ident
+62 ; semicolon
+63 case casesy
+64 - charcon
+65 : colon
+66 result ident
+67 = becomes
+68 n1 ident
+69 - minus
+70 n2 ident
+71 ; semicolon
+72 case casesy
+73 * charcon
+74 : colon
+75 result ident
+76 = becomes
+77 n1 ident
+78 * times
+79 n2 ident
+80 ; semicolon
+81 case casesy
+82 / charcon
+83 : colon
+84 result ident
+85 = becomes
+86 n1 ident
+87 / divsy
+88 n2 ident
+89 ; semicolon
+90 default defaultsy
+91 : colon
+92 printf returnsy
+93 ( lparen
+94 wrong operator:  stringcon
+95 , comma
+96 c ident
+97 ) rparen
+98 ; semicolon
+99 } rbrace
+100 return
+101 ( lparen
+102 result ident
+103 ) rparen
+104 ; semicolon
+105 } rbrace
+106 void voidsy
+107 caculate ident
+108 { lbrace
+109 int intsy
+110 n1 ident
+111 , comma
+112 n2 ident
+113 , comma
+114 i ident
+115 , comma
+116 j ident
+117 ; semicolon
+118 char charsy
+119 opt ident
+120 ; semicolon
+121 i ident
+122 = becomes
+123 0 intcon
+124 ; semicolon
+125 j ident
+126 = becomes
+127 0 intcon
+128 ; semicolon
+129 while whilesy
+130 ( lparen
+131 i ident
+132 < lss
+133 topop ident
+134 ) rparen
+135 { lbrace
+136 n1 ident
+137 = becomes
+138 numbers ident
+139 [ lbrack
+140 j ident
+141 ] rbrack
+142 ; semicolon
+143 n2 ident
+144 = becomes
+145 numbers ident
+146 [ lbrack
+147 j ident
+148 + plus
+149 1 intcon
+150 ] rbrack
+151 ; semicolon
+152 opt ident
+153 = becomes
+154 ops ident
+155 [ lbrack
+156 i ident
+157 ] rbrack
+158 ; semicolon
+159 numbers ident
+160 [ lbrack
+161 j ident
+162 + plus
+163 1 intcon
+164 ] rbrack
+165 = becomes
+166 op ident
+167 ( lparen
+168 n1 ident
+169 , comma
+170 n2 ident
+171 , comma
+172 opt ident
+173 ) rparen
+174 ; semicolon
+175 j ident
+176 = becomes
+177 j ident
+178 + plus
+179 a ident
+180 ; semicolon
+181 i ident
+182 = becomes
+183 i ident
+184 + plus
+185 a ident
+186 ; semicolon
+187 } rbrace
+188 printf returnsy
+189 ( lparen
+190 numbers ident
+191 [ lbrack
+192 j ident
+193 ] rbrack
+194 ) rparen
+195 ; semicolon
+196 } rbrace
+197 void voidsy
+198 out ident
+199 ( lparen
+200 int intsy
+201 total ident
+202 ) rparen
+203 { lbrace
+204 int intsy
+205 i ident
+206 ; semicolon
+207 i ident
+208 = becomes
+209 0 intcon
+210 ; semicolon
+211 while whilesy
+212 ( lparen
+213 i ident
+214 < lss
+215 total ident
+216 ) rparen
+217 { lbrace
+218 printf returnsy
+219 ( lparen
+220   stringcon
+221 , comma
+222 fnumbers ident
+223 [ lbrack
+224 i ident
+225 ] rbrack
+226 ) rparen
+227 ; semicolon
+228 i ident
+229 = becomes
+230 i ident
+231 + plus
+232 1 intcon
+233 ; semicolon
+234 } rbrace
+235 } rbrace
+236 int intsy
+237 fib ident
+238 ( lparen
+239 int intsy
+240 n ident
+241 ) rparen
+242 { lbrace
+243 if ifsy
+244 ( lparen
+245 n ident
+246 == eql
+247 1 intcon
+248 ) rparen
+249 { lbrace
+250 return
+251 ( lparen
+252 fnumbers ident
+253 [ lbrack
+254 0 intcon
+255 ] rbrack
+256 ) rparen
+257 ; semicolon
+258 } rbrace
+259 else elsesy
+260 { lbrace
+261 if ifsy
+262 ( lparen
+263 n ident
+264 == eql
+265 2 intcon
+266 ) rparen
+267 { lbrace
+268 return
+269 ( lparen
+270 fnumbers ident
+271 [ lbrack
+272 1 intcon
+273 ] rbrack
+274 ) rparen
+275 ; semicolon
+276 } rbrace
+277 else elsesy
+278 { lbrace
+279 fnumbers ident
+280 [ lbrack
+281 n ident
+282 - minus
+283 1 intcon
+284 ] rbrack
+285 = becomes
+286 fib ident
+287 ( lparen
+288 n ident
+289 - minus
+290 1 intcon
+291 ) rparen
+292 + plus
+293 fib ident
+294 ( lparen
+295 n ident
+296 - minus
+297 2 intcon
+298 ) rparen
+299 ; semicolon
+300 return
+301 ( lparen
+302 fnumbers ident
+303 [ lbrack
+304 n ident
+305 - minus
+306 1 intcon
+307 ] rbrack
+308 ) rparen
+309 ; semicolon
+310 } rbrace
+311 } rbrace
+312 } rbrace
+313 void voidsy
+314 fibo ident
+315 ( lparen
+316 int intsy
+317 total ident
+318 ) rparen
+319 { lbrace
+320 fnumbers ident
+321 [ lbrack
+322 0 intcon
+323 ] rbrack
+324 = becomes
+325 1 intcon
+326 ; semicolon
+327 fnumbers ident
+328 [ lbrack
+329 1 intcon
+330 ] rbrack
+331 = becomes
+332 1 intcon
+333 ; semicolon
+334 if ifsy
+335 ( lparen
+336 total ident
+337 <= leq
+338 0 intcon
+339 ) rparen
+340 { lbrace
+341 printf returnsy
+342 ( lparen
+343 fibo number error stringcon
+344 ) rparen
+345 ; semicolon
+346 return
+347 ; semicolon
+348 } rbrace
+349 else elsesy
+350 { lbrace
+351 if ifsy
+352 ( lparen
+353 total ident
+354 > gtr
+355 20 intcon
+356 ) rparen
+357 { lbrace
+358 printf returnsy
+359 ( lparen
+360 fibo number error stringcon
+361 ) rparen
+362 ; semicolon
+363 return
+364 ; semicolon
+365 } rbrace
+366 else elsesy
+367 { lbrace
+368 fib ident
+369 ( lparen
+370 total ident
+371 ) rparen
+372 ; semicolon
+373 out ident
+374 ( lparen
+375 total ident
+376 ) rparen
+377 ; semicolon
+378 } rbrace
+379 } rbrace
+380 } rbrace
+381 void voidsy
+382 main mainsy
+383 ( lparen
+384 ) rparen
+385 { lbrace
+386 int intsy
+387 judge ident
+388 , comma
+389 total ident
+390 , comma
+391 n1 ident
+392 , comma
+393 n2 ident
+394 , comma
+395 result ident
+396 ; semicolon
+397 char charsy
+398 c1 ident
+399 ; semicolon
+400 int intsy
+401 i ident
+402 ; semicolon
+403 topn ident
+404 = becomes
+405 0 intcon
+406 ; semicolon
+407 topop ident
+408 = becomes
+409 0 intcon
+410 ; semicolon
+411 scanf scanfsy
+412 ( lparen
+413 judge ident
+414 ) rparen
+415 ; semicolon
+416 if ifsy
+417 ( lparen
+418 judge ident
+419 == eql
+420 0 intcon
+421 ) rparen
+422 { lbrace
+423 i ident
+424 = becomes
+425 1 intcon
+426 ; semicolon
+427 scanf scanfsy
+428 ( lparen
+429 total ident
+430 ) rparen
+431 ; semicolon
+432 scanf scanfsy
+433 ( lparen
+434 n1 ident
+435 ) rparen
+436 ; semicolon
+437 numbers ident
+438 [ lbrack
+439 topn ident
+440 ] rbrack
+441 = becomes
+442 n1 ident
+443 ; semicolon
+444 topn ident
+445 = becomes
+446 topn ident
+447 + plus
+448 1 intcon
+449 ; semicolon
+450 if ifsy
+451 ( lparen
+452 total ident
+453 == eql
+454 1 intcon
+455 ) rparen
+456 { lbrace
+457 printf returnsy
+458 ( lparen
+459 n1 ident
+460 ) rparen
+461 ; semicolon
+462 } rbrace
+463 else elsesy
+464 { lbrace
+465 while whilesy
+466 ( lparen
+467 i ident
+468 < lss
+469 total ident
+470 ) rparen
+471 { lbrace
+472 scanf scanfsy
+473 ( lparen
+474 c1 ident
+475 , comma
+476 n2 ident
+477 ) rparen
+478 ; semicolon
+479 switch switchsy
+480 ( lparen
+481 c1 ident
+482 ) rparen
+483 { lbrace
+484 case casesy
+485 + charcon
+486 : colon
+487 judge ident
+488 = becomes
+489 0 intcon
+490 ; semicolon
+491 case casesy
+492 - charcon
+493 : colon
+494 judge ident
+495 = becomes
+496 0 intcon
+497 ; semicolon
+498 case casesy
+499 * charcon
+500 : colon
+501 judge ident
+502 = becomes
+503 1 intcon
+504 ; semicolon
+505 case casesy
+506 / charcon
+507 : colon
+508 judge ident
+509 = becomes
+510 1 intcon
+511 ; semicolon
+512 default defaultsy
+513 : colon
+514 { lbrace
+515 printf returnsy
+516 ( lparen
+517 wrong operator:  stringcon
+518 , comma
+519 c1 ident
+520 ) rparen
+521 ; semicolon
+522 return
+523 ; semicolon
+524 } rbrace
+525 } rbrace
+526 if ifsy
+527 ( lparen
+528 judge ident
+529 ) rparen
+530 { lbrace
+531 n1 ident
+532 = becomes
+533 numbers ident
+534 [ lbrack
+535 topn ident
+536 - minus
+537 1 intcon
+538 ] rbrack
+539 ; semicolon
+540 result ident
+541 = becomes
+542 op ident
+543 ( lparen
+544 n1 ident
+545 , comma
+546 n2 ident
+547 , comma
+548 c1 ident
+549 ) rparen
+550 ; semicolon
+551 numbers ident
+552 [ lbrack
+553 topn ident
+554 - minus
+555 1 intcon
+556 ] rbrack
+557 = becomes
+558 result ident
+559 ; semicolon
+560 } rbrace
+561 else elsesy
+562 { lbrace
+563 numbers ident
+564 [ lbrack
+565 topn ident
+566 ] rbrack
+567 = becomes
+568 n2 ident
+569 ; semicolon
+570 topn ident
+571 = becomes
+572 topn ident
+573 + plus
+574 1 intcon
+575 ; semicolon
+576 ops ident
+577 [ lbrack
+578 topop ident
+579 ] rbrack
+580 = becomes
+581 c1 ident
+582 ; semicolon
+583 topop ident
+584 = becomes
+585 topop ident
+586 + plus
+587 1 intcon
+588 ; semicolon
+589 } rbrace
+590 i ident
+591 = becomes
+592 i ident
+593 + plus
+594 2 intcon
+595 ; semicolon
+596 } rbrace
+597 caculate ident
+598 ; semicolon
+599 } rbrace
+600 } rbrace
+601 else elsesy
+602 { lbrace
+603 scanf scanfsy
+604 ( lparen
+605 total ident
+606 ) rparen
+607 ; semicolon
+608 fibo ident
+609 ( lparen
+610 total ident
+611 ) rparen
+612 ; semicolon
+613 } rbrace
+614 } rbrace
+1 const constsy
+2 int intsy
+3 a ident
+4 = becomes
+5 1 intcon
+6 ; semicolon
+7 char charsy
+8 c_d ident
+9 ; semicolon
+10 int intsy
+11 fnumbers ident
+12 [ lbrack
+13 20 intcon
+14 ] rbrack
+15 ; semicolon
+16 int intsy
+17 topn ident
+18 , comma
+19 topop ident
+20 ; semicolon
+21 int intsy
+22 numbers ident
+23 [ lbrack
+24 20 intcon
+25 ] rbrack
+26 ; semicolon
+27 char charsy
+28 ops ident
+29 [ lbrack
+30 20 intcon
+31 ] rbrack
+32 ; semicolon
+33 int intsy
+34 op ident
+35 ( lparen
+36 int intsy
+37 n1 ident
+38 , comma
+39 int intsy
+40 n2 ident
+41 , comma
+42 char charsy
+43 c ident
+44 ) rparen
+45 { lbrace
+46 int intsy
+47 result ident
+48 ; semicolon
+49 switch switchsy
+50 ( lparen
+51 c ident
+52 ) rparen
+53 { lbrace
+54 case casesy
+55 + charcon
+56 : colon
+57 result ident
+58 = becomes
+59 n1 ident
+60 + plus
+61 n2 ident
+62 ; semicolon
+63 case casesy
+64 - charcon
+65 : colon
+66 result ident
+67 = becomes
+68 n1 ident
+69 - minus
+70 n2 ident
+71 ; semicolon
+72 case casesy
+73 * charcon
+74 : colon
+75 result ident
+76 = becomes
+77 n1 ident
+78 * times
+79 n2 ident
+80 ; semicolon
+81 case casesy
+82 / charcon
+83 : colon
+84 result ident
+85 = becomes
+86 n1 ident
+87 / divsy
+88 n2 ident
+89 ; semicolon
+90 default defaultsy
+91 : colon
+92 printf returnsy
+93 ( lparen
+94 wrong operator:  stringcon
+95 , comma
+96 c ident
+97 ) rparen
+98 ; semicolon
+99 } rbrace
+100 return
+101 ( lparen
+102 result ident
+103 ) rparen
+104 ; semicolon
+105 } rbrace
+106 void voidsy
+107 caculate ident
+108 { lbrace
+109 int intsy
+110 n1 ident
+111 , comma
+112 n2 ident
+113 , comma
+114 i ident
+115 , comma
+116 j ident
+117 ; semicolon
+118 char charsy
+119 opt ident
+120 ; semicolon
+121 i ident
+122 = becomes
+123 0 intcon
+124 ; semicolon
+125 j ident
+126 = becomes
+127 0 intcon
+128 ; semicolon
+129 while whilesy
+130 ( lparen
+131 i ident
+132 < lss
+133 topop ident
+134 ) rparen
+135 { lbrace
+136 n1 ident
+137 = becomes
+138 numbers ident
+139 [ lbrack
+140 j ident
+141 ] rbrack
+142 ; semicolon
+143 n2 ident
+144 = becomes
+145 numbers ident
+146 [ lbrack
+147 j ident
+148 + plus
+149 1 intcon
+150 ] rbrack
+151 ; semicolon
+152 opt ident
+153 = becomes
+154 ops ident
+155 [ lbrack
+156 i ident
+157 ] rbrack
+158 ; semicolon
+159 numbers ident
+160 [ lbrack
+161 j ident
+162 + plus
+163 1 intcon
+164 ] rbrack
+165 = becomes
+166 op ident
+167 ( lparen
+168 n1 ident
+169 , comma
+170 n2 ident
+171 , comma
+172 opt ident
+173 ) rparen
+174 ; semicolon
+175 j ident
+176 = becomes
+177 j ident
+178 + plus
+179 a ident
+180 ; semicolon
+181 i ident
+182 = becomes
+183 i ident
+184 + plus
+185 a ident
+186 ; semicolon
+187 } rbrace
+188 printf returnsy
+189 ( lparen
+190 numbers ident
+191 [ lbrack
+192 j ident
+193 ] rbrack
+194 ) rparen
+195 ; semicolon
+196 } rbrace
+197 void voidsy
+198 out ident
+199 ( lparen
+200 int intsy
+201 total ident
+202 ) rparen
+203 { lbrace
+204 int intsy
+205 i ident
+206 ; semicolon
+207 i ident
+208 = becomes
+209 0 intcon
+210 ; semicolon
+211 while whilesy
+212 ( lparen
+213 i ident
+214 < lss
+215 total ident
+216 ) rparen
+217 { lbrace
+218 printf returnsy
+219 ( lparen
+220   stringcon
+221 , comma
+222 fnumbers ident
+223 [ lbrack
+224 i ident
+225 ] rbrack
+226 ) rparen
+227 ; semicolon
+228 i ident
+229 = becomes
+230 i ident
+231 + plus
+232 1 intcon
+233 ; semicolon
+234 } rbrace
+235 } rbrace
+236 int intsy
+237 fib ident
+238 ( lparen
+239 int intsy
+240 n ident
+241 ) rparen
+242 { lbrace
+243 if ifsy
+244 ( lparen
+245 n ident
+246 == eql
+247 1 intcon
+248 ) rparen
+249 { lbrace
+250 return
+251 ( lparen
+252 fnumbers ident
+253 [ lbrack
+254 0 intcon
+255 ] rbrack
+256 ) rparen
+257 ; semicolon
+258 } rbrace
+259 else elsesy
+260 { lbrace
+261 if ifsy
+262 ( lparen
+263 n ident
+264 == eql
+265 2 intcon
+266 ) rparen
+267 { lbrace
+268 return
+269 ( lparen
+270 fnumbers ident
+271 [ lbrack
+272 1 intcon
+273 ] rbrack
+274 ) rparen
+275 ; semicolon
+276 } rbrace
+277 else elsesy
+278 { lbrace
+279 fnumbers ident
+280 [ lbrack
+281 n ident
+282 - minus
+283 1 intcon
+284 ] rbrack
+285 = becomes
+286 fib ident
+287 ( lparen
+288 n ident
+289 - minus
+290 1 intcon
+291 ) rparen
+292 + plus
+293 fib ident
+294 ( lparen
+295 n ident
+296 - minus
+297 2 intcon
+298 ) rparen
+299 ; semicolon
+300 return
+301 ( lparen
+302 fnumbers ident
+303 [ lbrack
+304 n ident
+305 - minus
+306 1 intcon
+307 ] rbrack
+308 ) rparen
+309 ; semicolon
+310 } rbrace
+311 } rbrace
+312 } rbrace
+313 void voidsy
+314 fibo ident
+315 ( lparen
+316 int intsy
+317 total ident
+318 ) rparen
+319 { lbrace
+320 fnumbers ident
+321 [ lbrack
+322 0 intcon
+323 ] rbrack
+324 = becomes
+325 1 intcon
+326 ; semicolon
+327 fnumbers ident
+328 [ lbrack
+329 1 intcon
+330 ] rbrack
+331 = becomes
+332 1 intcon
+333 ; semicolon
+334 if ifsy
+335 ( lparen
+336 total ident
+337 <= leq
+338 0 intcon
+339 ) rparen
+340 { lbrace
+341 printf returnsy
+342 ( lparen
+343 fibo number error stringcon
+344 ) rparen
+345 ; semicolon
+346 return
+347 ; semicolon
+348 } rbrace
+349 else elsesy
+350 { lbrace
+351 if ifsy
+352 ( lparen
+353 total ident
+354 > gtr
+355 20 intcon
+356 ) rparen
+357 { lbrace
+358 printf returnsy
+359 ( lparen
+360 fibo number error stringcon
+361 ) rparen
+362 ; semicolon
+363 return
+364 ; semicolon
+365 } rbrace
+366 else elsesy
+367 { lbrace
+368 fib ident
+369 ( lparen
+370 total ident
+371 ) rparen
+372 ; semicolon
+373 out ident
+374 ( lparen
+375 total ident
+376 ) rparen
+377 ; semicolon
+378 } rbrace
+379 } rbrace
+380 } rbrace
+381 void voidsy
+382 main mainsy
+383 ( lparen
+384 ) rparen
+385 { lbrace
+386 int intsy
+387 judge ident
+388 , comma
+389 total ident
+390 , comma
+391 n1 ident
+392 , comma
+393 n2 ident
+394 , comma
+395 result ident
+396 ; semicolon
+397 char charsy
+398 c1 ident
+399 ; semicolon
+400 int intsy
+401 i ident
+402 ; semicolon
+403 topn ident
+404 = becomes
+405 0 intcon
+406 ; semicolon
+407 topop ident
+408 = becomes
+409 0 intcon
+410 ; semicolon
+411 scanf scanfsy
+412 ( lparen
+413 judge ident
+414 ) rparen
+415 ; semicolon
+416 if ifsy
+417 ( lparen
+418 judge ident
+419 == eql
+420 0 intcon
+421 ) rparen
+422 { lbrace
+423 i ident
+424 = becomes
+425 1 intcon
+426 ; semicolon
+427 scanf scanfsy
+428 ( lparen
+429 total ident
+430 ) rparen
+431 ; semicolon
+432 scanf scanfsy
+433 ( lparen
+434 n1 ident
+435 ) rparen
+436 ; semicolon
+437 numbers ident
+438 [ lbrack
+439 topn ident
+440 ] rbrack
+441 = becomes
+442 n1 ident
+443 ; semicolon
+444 topn ident
+445 = becomes
+446 topn ident
+447 + plus
+448 1 intcon
+449 ; semicolon
+450 if ifsy
+451 ( lparen
+452 total ident
+453 == eql
+454 1 intcon
+455 ) rparen
+456 { lbrace
+457 printf returnsy
+458 ( lparen
+459 n1 ident
+460 ) rparen
+461 ; semicolon
+462 } rbrace
+463 else elsesy
+464 { lbrace
+465 while whilesy
+466 ( lparen
+467 i ident
+468 < lss
+469 total ident
+470 ) rparen
+471 { lbrace
+472 scanf scanfsy
+473 ( lparen
+474 c1 ident
+475 , comma
+476 n2 ident
+477 ) rparen
+478 ; semicolon
+479 switch switchsy
+480 ( lparen
+481 c1 ident
+482 ) rparen
+483 { lbrace
+484 case casesy
+485 + charcon
+486 : colon
+487 judge ident
+488 = becomes
+489 0 intcon
+490 ; semicolon
+491 case casesy
+492 - charcon
+493 : colon
+494 judge ident
+495 = becomes
+496 0 intcon
+497 ; semicolon
+498 case casesy
+499 * charcon
+500 : colon
+501 judge ident
+502 = becomes
+503 1 intcon
+504 ; semicolon
+505 case casesy
+506 / charcon
+507 : colon
+508 judge ident
+509 = becomes
+510 1 intcon
+511 ; semicolon
+512 default defaultsy
+513 : colon
+514 { lbrace
+515 printf returnsy
+516 ( lparen
+517 wrong operator:  stringcon
+518 , comma
+519 c1 ident
+520 ) rparen
+521 ; semicolon
+522 return
+523 ; semicolon
+524 } rbrace
+525 } rbrace
+526 if ifsy
+527 ( lparen
+528 judge ident
+529 ) rparen
+530 { lbrace
+531 n1 ident
+532 = becomes
+533 numbers ident
+534 [ lbrack
+535 topn ident
+536 - minus
+537 1 intcon
+538 ] rbrack
+539 ; semicolon
+540 result ident
+541 = becomes
+542 op ident
+543 ( lparen
+544 n1 ident
+545 , comma
+546 n2 ident
+547 , comma
+548 c1 ident
+549 ) rparen
+550 ; semicolon
+551 numbers ident
+552 [ lbrack
+553 topn ident
+554 - minus
+555 1 intcon
+556 ] rbrack
+557 = becomes
+558 result ident
+559 ; semicolon
+560 } rbrace
+561 else elsesy
+562 { lbrace
+563 numbers ident
+564 [ lbrack
+565 topn ident
+566 ] rbrack
+567 = becomes
+568 n2 ident
+569 ; semicolon
+570 topn ident
+571 = becomes
+572 topn ident
+573 + plus
+574 1 intcon
+575 ; semicolon
+576 ops ident
+577 [ lbrack
+578 topop ident
+579 ] rbrack
+580 = becomes
+581 c1 ident
+582 ; semicolon
+583 topop ident
+584 = becomes
+585 topop ident
+586 + plus
+587 1 intcon
+588 ; semicolon
+589 } rbrace
+590 i ident
+591 = becomes
+592 i ident
+593 + plus
+594 2 intcon
+595 ; semicolon
+596 } rbrace
+597 caculate ident
+598 ; semicolon
+599 } rbrace
+600 } rbrace
+601 else elsesy
+602 { lbrace
+603 scanf scanfsy
+604 ( lparen
+605 total ident
+606 ) rparen
+607 ; semicolon
+608 fibo ident
+609 ( lparen
+610 total ident
+611 ) rparen
+612 ; semicolon
+613 } rbrace
+614 } rbrace

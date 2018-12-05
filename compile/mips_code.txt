@@ -1,0 +1,299 @@
+.data
+a$0:.asciiz "OVERFLOW! "
+a$1:.asciiz "complete number: "
+a$2:.asciiz "  "
+a$3:.asciiz "---------------------------------------------------------------\n"
+a$4:.asciiz " "
+a$5:.asciiz "The total is "
+max_num: .word 1024
+.text
+j main
+complete_num:
+addiu $sp, $sp,-4140
+
+sw $ra, 4136($sp)
+addiu $t1,$0,2
+move $t1,$t1
+sw $t1,4100($sp)
+WLABEL0:
+lw $t1,4100($sp)
+lw $t2,max_num
+bge $t1, $t2 EWLABEL0
+addiu $t1,$0,-1
+move $t1,$t1
+sw $t1,4104($sp)
+lw $t1,4100($sp)
+move $t1,$t1
+sw $t1,4108($sp)
+addiu $t1,$0,1
+move $t1,$t1
+sw $t1,4096($sp)
+WLABEL1:
+lw $t1,4096($sp)
+lw $t2,4100($sp)
+bge $t1, $t2 EWLABEL1
+lw $t1,4100($sp)
+lw $t2,4096($sp)
+div $16,$t1,$t2
+add $t1, $0, $16
+lw $t2,4096($sp)
+mul $16,$t1,$t2
+add $t1, $0, $16
+move $t1,$t1
+sw $t1,4112($sp)
+lw $t1,4112($sp)
+lw $t2,4100($sp)
+bne $t1, $t2 ELSELABEL0
+lw $t1,4104($sp)
+addiu $t2,$0,1
+add $16,$t1,$t2
+add $t1, $0, $16
+move $t1,$t1
+sw $t1,4104($sp)
+lw $t1,4108($sp)
+lw $t2,4096($sp)
+sub $16,$t1,$t2
+add $t1, $0, $16
+move $t1,$t1
+sw $t1,4108($sp)
+lw $t1,4104($sp)
+addiu $t2,$0,1024
+blt $t1, $t2 ELSELABEL1
+move $t1, $a0
+li $v0 4
+la $a0, a$0
+syscall
+move $a0, $t1
+j ENDIFLABEL1
+ELSELABEL1:
+lw $t1,4096($sp)
+move $t1,$t1
+lw $t3,4104($sp)
+sll $t3, $t3,2
+addiu $t3, $t3,0
+add $t3, $t3, $sp
+sw $t1,0($t3)
+ENDIFLABEL1:
+j ENDIFLABEL0
+ELSELABEL0:
+ENDIFLABEL0:
+lw $t1,4096($sp)
+addiu $t2,$0,1
+add $16,$t1,$t2
+add $t1, $0, $16
+move $t1,$t1
+sw $t1,4096($sp)
+j WLABEL1
+EWLABEL1:
+lw $t1,4108($sp)
+addiu $t2,$0,0
+bne $t1, $t2 ELSELABEL2
+move $t1, $a0
+li $v0 4
+la $a0, a$1
+syscall
+move $a0, $t1
+move $t1, $a0
+lw $a0,4100($sp)
+li $v0, 1
+syscall
+move $a0, $t1
+addiu $t1,$0,0
+move $t1,$t1
+sw $t1,4096($sp)
+WLABEL2:
+lw $t1,4096($sp)
+lw $t2,4104($sp)
+bgt $t1, $t2 EWLABEL2
+move $t1, $a0
+li $v0 4
+la $a0, a$2
+syscall
+move $a0, $t1
+lw $t1,4096($sp)
+move $16,$t1
+move $t1, $a0
+add $t0, $0, $16
+sll $t0, $t0,2
+addiu $t0, $t0,0
+add $t0, $t0, $sp
+lw $a0,0($t0)
+li $v0, 1
+syscall
+move $a0, $t1
+lw $t1,4096($sp)
+addiu $t2,$0,1
+add $16,$t1,$t2
+add $t1, $0, $16
+move $t1,$t1
+sw $t1,4096($sp)
+j WLABEL2
+EWLABEL2:
+move $t1, $a0
+li $v0 4
+la $a0, a$2
+syscall
+move $a0, $t1
+j ENDIFLABEL2
+ELSELABEL2:
+ENDIFLABEL2:
+lw $t1,4100($sp)
+addiu $t2,$0,1
+add $16,$t1,$t2
+add $t1, $0, $16
+move $t1,$t1
+sw $t1,4100($sp)
+j WLABEL0
+EWLABEL0:
+move $t1, $a0
+li $v0 4
+la $a0, a$3
+syscall
+move $a0, $t1
+addiu $t1,$0,0
+move $t1,$t1
+sw $t1,4124($sp)
+addiu $t1,$0,1
+move $t1,$t1
+sw $t1,4128($sp)
+addiu $t1,$0,2
+move $t1,$t1
+sw $t1,4116($sp)
+WLABEL3:
+lw $t1,4116($sp)
+lw $t2,max_num
+bgt $t1, $t2 EWLABEL3
+lw $t1,4116($sp)
+addiu $t2,$0,1
+sub $16,$t1,$t2
+add $t1, $0, $16
+move $t1,$t1
+sw $t1,4120($sp)
+addiu $t1,$0,2
+move $t1,$t1
+sw $t1,4096($sp)
+WLABEL4:
+lw $t1,4096($sp)
+lw $t2,4120($sp)
+bgt $t1, $t2 EWLABEL4
+lw $t1,4116($sp)
+lw $t2,4096($sp)
+div $16,$t1,$t2
+add $t1, $0, $16
+lw $t2,4096($sp)
+mul $16,$t1,$t2
+add $t1, $0, $16
+move $t1,$t1
+sw $t1,4132($sp)
+lw $t1,4132($sp)
+lw $t2,4116($sp)
+bne $t1, $t2 ELSELABEL3
+addiu $t1,$0,0
+move $t1,$t1
+sw $t1,4128($sp)
+j ENDIFLABEL3
+ELSELABEL3:
+ENDIFLABEL3:
+lw $t1,4096($sp)
+addiu $t2,$0,1
+add $16,$t1,$t2
+add $t1, $0, $16
+move $t1,$t1
+sw $t1,4096($sp)
+j WLABEL4
+EWLABEL4:
+lw $t1,4128($sp)
+addiu $t2,$0,1
+bne $t1, $t2 ELSELABEL4
+move $t1, $a0
+li $v0 4
+la $a0, a$4
+syscall
+move $a0, $t1
+move $t1, $a0
+lw $a0,4116($sp)
+li $v0, 1
+syscall
+move $a0, $t1
+lw $t1,4124($sp)
+addiu $t2,$0,1
+add $16,$t1,$t2
+add $t1, $0, $16
+move $t1,$t1
+sw $t1,4124($sp)
+lw $t1,4124($sp)
+addiu $t2,$0,10
+div $16,$t1,$t2
+add $t1, $0, $16
+addiu $t2,$0,10
+mul $16,$t1,$t2
+add $t1, $0, $16
+move $t1,$t1
+sw $t1,4132($sp)
+lw $t1,4132($sp)
+lw $t2,4124($sp)
+bne $t1, $t2 ELSELABEL5
+move $t1, $a0
+li $v0 4
+la $a0, a$2
+syscall
+move $a0, $t1
+j ENDIFLABEL5
+ELSELABEL5:
+ENDIFLABEL5:
+j ENDIFLABEL4
+ELSELABEL4:
+ENDIFLABEL4:
+addiu $t1,$0,1
+move $t1,$t1
+sw $t1,4128($sp)
+lw $t1,4116($sp)
+addiu $t2,$0,1
+add $16,$t1,$t2
+add $t1, $0, $16
+move $t1,$t1
+sw $t1,4116($sp)
+j WLABEL3
+EWLABEL3:
+move $t1, $a0
+li $v0 4
+la $a0, a$5
+syscall
+move $a0, $t1
+move $t1, $a0
+lw $a0,4124($sp)
+li $v0, 1
+syscall
+move $a0, $t1
+lw $ra,4136($sp)
+addiu $sp, $sp,4140
+jr $ra
+main:
+addiu $sp, $sp,-4
+
+sw $ra, 0($sp)
+addiu $sp, $sp,-40
+sw $16,0($sp)
+sw $17,4($sp)
+sw $18,8($sp)
+sw $19,12($sp)
+sw $20,16($sp)
+sw $21,20($sp)
+sw $22,24($sp)
+sw $23,28($sp)
+sw $24,32($sp)
+sw $25,36($sp)
+jal complete_num
+lw $16,0($sp)
+lw $17,4($sp)
+lw $18,8($sp)
+lw $19,12($sp)
+lw $20,16($sp)
+lw $21,20($sp)
+lw $22,24($sp)
+lw $23,28($sp)
+lw $24,32($sp)
+lw $25,36($sp)
+addiu $sp, $sp,40
+li $v0, 10
+syscall

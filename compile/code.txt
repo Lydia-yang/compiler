@@ -1,0 +1,221 @@
+const int a = 1
+const char b = 'a'
+VAR char c_d
+VAR int fnumbers [20]
+VAR int topn
+VAR int topop
+VAR int numbers [20]
+VAR char ops [20]
+int op()
+PARA int n1
+PARA int n2
+PARA char c
+VAR int result
+$0=n1+'a'
+result=$0
+LABEL0c0:
+BZ c=='+' LABEL1c0
+$0=n1+n2
+result=$0
+GOTO CLABEL0
+LABEL1c0:
+BZ c=='-' LABEL2c0
+$0=n1-n2
+result=$0
+GOTO CLABEL0
+LABEL2c0:
+BZ c=='*' LABEL3c0
+$0=n1*n2
+result=$0
+GOTO CLABEL0
+LABEL3c0:
+BZ c=='/' LABEL4c0
+$0=n1/n2
+result=$0
+GOTO CLABEL0
+LABEL4c0:
+printf "wrong operator: "
+printf c
+CLABEL0:
+RET result
+void caculate()
+VAR int n1
+VAR int n2
+VAR int i
+VAR int j
+VAR char opt
+i=0
+j=0
+WLABEL0:
+BZ i <topop EWLABEL0
+$0=j
+n1=numbers[$0]
+$0=j+1
+$0=$0
+n2=numbers[$0]
+$0=i
+opt=ops[$0]
+$0=j+1
+
+PUSH n1
+PUSH n2
+PUSH opt
+CALL op
+$1=RET
+numbers[$0]=$1
+$0=j+a
+j=$0
+$0=i+a
+i=$0
+GOTO WLABEL0
+EWLABEL0:
+$0=j
+printf numbers[$0]
+void out()
+PARA int total
+VAR int i
+i=0
+WLABEL1:
+BZ i <total EWLABEL1
+printf " "
+$0=i
+printf fnumbers[$0]
+$0=i+1
+i=$0
+GOTO WLABEL1
+EWLABEL1:
+int fib()
+PARA int n
+BZ n ==1 ELSELABEL0
+$0=0
+RET fnumbers[$0]
+GOTO ENDIFLABEL0
+ELSELABEL0:
+BZ n ==2 ELSELABEL1
+$0=1
+RET fnumbers[$0]
+GOTO ENDIFLABEL1
+ELSELABEL1:
+$0=n-1
+$1=n-1
+
+PUSH $1
+CALL fib
+$1=RET
+$2=n-2
+
+PUSH $2
+CALL fib
+$2=RET
+$1=$1+$2
+fnumbers[$0]=$1
+$0=n-1
+$0=$0
+RET fnumbers[$0]
+ENDIFLABEL1:
+ENDIFLABEL0:
+void fibo()
+PARA int total
+fnumbers[0]=1
+fnumbers[1]=1
+BZ total <=0 ELSELABEL2
+printf "fibo number error"
+RET
+GOTO ENDIFLABEL2
+ELSELABEL2:
+BZ total >20 ELSELABEL3
+printf "fibo number error"
+RET
+GOTO ENDIFLABEL3
+ELSELABEL3:
+
+PUSH total
+CALL fib
+
+PUSH total
+CALL out
+ENDIFLABEL3:
+ENDIFLABEL2:
+void main()
+VAR int judge
+VAR int total
+VAR int n1
+VAR int n2
+VAR int result
+VAR char c1
+VAR int i
+topn=0
+topop=0
+scanf judge
+BZ judge ==0 ELSELABEL4
+i=1
+scanf total
+scanf n1
+numbers[topn]=n1
+$0=topn+1
+topn=$0
+BZ total ==1 ELSELABEL5
+printf n1
+GOTO ENDIFLABEL5
+ELSELABEL5:
+WLABEL2:
+BZ i <total EWLABEL2
+scanf c1
+scanf n2
+LABEL0c1:
+BZ c1=='+' LABEL1c1
+judge=0
+GOTO CLABEL1
+LABEL1c1:
+BZ c1=='-' LABEL2c1
+judge=0
+GOTO CLABEL1
+LABEL2c1:
+BZ c1=='*' LABEL3c1
+judge=1
+GOTO CLABEL1
+LABEL3c1:
+BZ c1=='/' LABEL4c1
+judge=1
+GOTO CLABEL1
+LABEL4c1:
+printf "wrong operator: "
+printf c1
+RET
+CLABEL1:
+BZ judge ELSELABEL6
+$0=topn-1
+$0=$0
+n1=numbers[$0]
+
+PUSH n1
+PUSH n2
+PUSH c1
+CALL op
+$0=RET
+result=$0
+$0=topn-1
+numbers[$0]=result
+GOTO ENDIFLABEL6
+ELSELABEL6:
+numbers[topn]=n2
+$0=topn+1
+topn=$0
+ops[topop]=c1
+$0=topop+1
+topop=$0
+ENDIFLABEL6:
+$0=i+2
+i=$0
+GOTO WLABEL2
+EWLABEL2:
+
+CALL caculate
+ENDIFLABEL5:
+GOTO ENDIFLABEL4
+ELSELABEL4:
+scanf total
+
+PUSH total
+CALL fibo
+ENDIFLABEL4:

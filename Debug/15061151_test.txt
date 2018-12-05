@@ -1,0 +1,139 @@
+
+const int a =1;
+cHar c_d;
+int fnumbers[20];
+int topn, topop;
+int numbers[20];
+char ops[20];
+
+
+int op(int n1, int n2, char c){
+	
+	int result;
+	
+	switch(c){
+		case '+':
+			result = n1+n2;
+		case '-':
+			result = n1-n2;
+		case '*':
+			result = n1*n2;
+		case '/':
+			result = n1/n2;
+		default: 
+			printf("wrong operator: ", c);
+	}
+	return (result);  
+}
+ 
+void caculate{
+	
+	int n1, n2, i, j;
+	char opt;
+	i=0;
+	j=0;
+	
+	while(i<topop){
+		n1 = numbers[j];
+		n2 = numbers[j+1];		
+		opt = ops[i];
+		numbers[j+1] = op(n1, n2, opt); 
+		j = j+a;
+		i = i+a;
+	}
+	printf(numbers[j]);
+}
+
+void out(int total){
+	int i;
+	i = 0;
+	while(i<total){
+		printf(" ", fnumbers[i]);
+		i=i+1;
+	}
+}
+
+int fib(int n){
+	
+	if(n==1){
+		return (fnumbers[0]);
+	}else{
+		if(n==2){
+			return (fnumbers[1]);
+		}else{
+			fnumbers[n-1]=fib(n-1)+fib(n-2);
+			return (fnumbers[n-1]);
+		}
+	}
+}
+ 
+void fibo(int total){
+	fnumbers[0]=1;
+	fnumbers[1]=1;
+	if(total<=0){
+		printf("fibo number error");
+		return;
+	}else{
+		if(total>20){
+			printf("fibo number error");
+	        return;
+		}else{
+			fib(total);
+			out(total);
+		}	
+	}
+}
+
+void main()
+{
+	int judge, total, n1, n2, result;
+	char c1;
+	int i;
+	topn = 0;
+	topop = 0;
+	scanf(judge); 
+	if(judge==0){
+		i=1;
+		scanf(total);
+		scanf(n1);
+		numbers[topn]=n1;
+		topn = topn +1;
+		if(total==1){
+			printf(n1);
+		}else{
+			while(i<total){
+				scanf(c1, n2);
+				switch(c1){
+						case '+':
+							judge = 0;
+						case '-':
+							judge = 0;
+						case '*':
+							judge = 1;
+						case '/':
+							judge = 1;
+						default:{
+							printf("wrong operator: ", c1);
+							return;
+						}
+				}
+				if(judge){
+					n1 = numbers[topn-1];
+				    result=op(n1, n2, c1);
+					numbers[topn-1] = result;	
+				}else{
+					numbers[topn] = n2;
+					topn=topn+1;
+					ops[topop] = c1;
+					topop = topop +1;
+				} 
+				i=i+2;
+			}
+			caculate;
+		}
+	}else{
+		scanf(total);
+		fibo(total);
+	}
+} 
+

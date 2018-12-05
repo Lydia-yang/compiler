@@ -1,0 +1,56 @@
+int fa(int a, char b){
+	const int q=1;
+	int w;
+	w=a;
+	if(a==1){} 
+	else {;{};}
+	while(a<=10)
+	{a=a+q;;;}
+	a=a+b;
+	return (fa1(w));
+}
+int fc{
+	return (3/2);
+}
+int fa1(int a){
+	if(a<0){;}
+	else{
+		switch(a){
+			case 0: return (0);
+			case 1: return (a);
+			default: {vb=a*fa1(a-1);;{;;}return (vb);}
+		}
+	}
+	return (-1);
+}
+void fd(int i){
+	if(i>0){
+		fa2(i);
+	}else printf("ERROR");
+}
+void fa2(int i){
+	int t;
+	if(i==0) return;
+	else{
+		t=i/2;
+		fa2(t);
+		if(i-t*2==0) printf('0');
+		else printf('1');
+	}
+}
+void main(){
+	const int a0=10;
+	int vva,vvb;
+	char vvc;
+	va=a0;
+	scanf(va,vva,vca);
+	fc;
+	vac[0]=-(a0+-7)*a_+fc;
+	vac[1]=-+7;
+	vac[2]=fa(a0,a_);
+	printf("!#: ",vac[0]);
+	printf("-----");
+	printf(vac[2]);
+	fd(vva);
+	return;
+}
